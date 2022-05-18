@@ -6,7 +6,10 @@ export default function EditActor() {
         <>
             <h3>Edit Actor</h3>
             <h3>Create Actor</h3>
-            <ActionForm model={{name: 'Tom holland', dateOfBirth: new Date('1996-06-01T00:00:00')}}
+            <ActionForm model={{name: 'Arnold', dateOfBirth: new Date('1996-06-01T00:00:00'),
+            pictureUrl:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Arnold_Schwarzenegger_by_Gage_Skidmore_4.jpg/220px-Arnold_Schwarzenegger_by_Gage_Skidmore_4.jpg'
+
+        }}
             onSubmit={values => console.log(values)}/>
         </>
     )

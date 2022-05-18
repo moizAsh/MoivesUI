@@ -5,6 +5,7 @@ import Button from "../utils/Button";
 import actorCreationDTO from "./actors.model";
 import * as Yup from 'yup';
 import DateField from "../forms/DateField";
+import ImageField from "../forms/ImageField";
 export default function ActionForm(props: actorFormProps){
     return (
         <Formik
@@ -20,7 +21,7 @@ export default function ActionForm(props: actorFormProps){
                 <Form>
                     <TextField displayName="Name" field="name" />
                     <DateField displayName="Date of Birth" field="dateOfBirth"/>
-
+                    <ImageField displayName="Picture" field="picture" imageUrl={props.model.pictureUrl}/>
                     <Button disabled={formikProps.isSubmitting}
                         type="submit"
                     >Save Changes</Button>
