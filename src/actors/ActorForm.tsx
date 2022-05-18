@@ -4,20 +4,22 @@ import TextField from "../forms/TextField";
 import Button from "../utils/Button";
 import actorCreationDTO from "./actors.model";
 import * as Yup from 'yup';
+import DateField from "../forms/DateField";
 export default function ActionForm(props: actorFormProps){
     return (
         <Formik
         initialValues={props.model}
         onSubmit={props.onSubmit}
-        validationSchema={Yup.object({name: Yup.string().required('This field is required').firstLetterUpperCase()})}
+        validationSchema={Yup.object(
+            {
+                name: Yup.string().required('This field is required').firstLetterUpperCase(),
+                dateOfBirth: Yup.date().nullable().required('This field is required')
+        })}
         >
             {(formikProps) => (
                 <Form>
                     <TextField displayName="Name" field="name" />
-                    {/* <DateField displayName="Date of Birth" field="dateOfBirth" />
-                    <ImageField displayName="Picture" field="picture" 
-                    imageURL={props.model.pictureURL} />
-                    <MarkdownField displayName="Biography" field="biography" /> */}
+                    <DateField displayName="Date of Birth" field="dateOfBirth"/>
 
                     <Button disabled={formikProps.isSubmitting}
                         type="submit"
