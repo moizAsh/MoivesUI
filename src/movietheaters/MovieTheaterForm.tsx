@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import TextField from "../forms/TextField";
 import Button from "../utils/Button";
 import { movieTheaterCreationDTO } from "./movieTheater.model";
-import * as Yup from 'yup'
-import Map from "../utils/Map";
+import * as Yup from 'yup';
 import MapField from "../forms/MapField";
 import coordinateDTO from "../utils/coordinates.model";
 

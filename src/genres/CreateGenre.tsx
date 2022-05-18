@@ -1,4 +1,3 @@
-import { promises } from "dns";
 import GenreForm from "./GenreForm";
 
 export default function CreateGenre() {

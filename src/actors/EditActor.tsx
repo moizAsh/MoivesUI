@@ -1,4 +1,3 @@
-import { date } from "yup";
 import ActionForm from "./ActorForm";
 
 export default function EditActor() {
